@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="piano-container">
+        <h1>PIANO jouable</h1>
+        
+        <div class="controls">
+            <div class="volume-control">
+                <label for="volume">Volume:</label>
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
+            </div>
+            <div class="toggle-control">
+                <label class="switch">
+                    <input type="checkbox" id="showLetters" checked>
+                    <span class="slider round"></span>
+                </label>
+                <label for="showLetters">Afficher les clés</label>
+            </div>
+        </div>
+        
+        <div class="piano">
+            <!-- Touches blanches -->
+            <div class="white-key" data-note="FAIRE" data-key="W"><span>W</span></div>
+            <div class="white-key" data-note="RE" data-key="E"><span>E</span></div>
+            <div class="white-key" data-note="MI" data-key="D"><span>D</span></div>
+            <div class="white-key" data-note="FA" data-key="F"><span>F</span></div>
+            <div class="white-key" data-note="SOL" data-key="G"><span>G</span></div>
+            <div class="white-key" data-note="RE" data-key="Y"><span>Y</span></div>
+            <div class="white-key" data-note="MI" data-key="H"><span>H</span></div>
+            <div class="white-key" data-note="LA" data-key="J"><span>J</span></div>
+            <div class="white-key" data-note="SI" data-key="K"><span>K</span></div>
+            <div class="white-key" data-note="FAIRE" data-key="L"><span>L</span></div>
+            
+            <!-- Touches noires -->
+            <div class="black-key" data-note="SOL" data-key="O"><span>O</span></div>
+            <div class="black-key" data-note="LA" data-key="P"><span>P</span></div>
+            <div class="black-key" data-note="CONCERNANT" data-key=";"><span>;</span></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

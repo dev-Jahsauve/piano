@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano-container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style du toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.piano {
+    display: flex;
+    position: relative;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.white-key {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    flex: 1;
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.1s;
+}
+
+.white-key.active {
+    background-color: #e0e0e0;
+}
+
+.black-key {
+    background-color: #333;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    width: 40px;
+    height: 60%;
+    top: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.1s;
+}
+
+.black-key.active {
+    background-color: #111;
+}
+
+.black-key span {
+    font-size: 0.8em;
+}
+
+/* Positionnement des touches noires */
+.black-key:nth-child(1) {
+    left: 7.5%;
+}
+
+.black-key:nth-child(2) {
+    left: 17.5%;
+}
+
+.black-key:nth-child(3) {
+    left: 47.5%;
+}
+
+/* Masquer les lettres si nécessaire */
+.piano.hide-letters span {
+    display: none;
+}
