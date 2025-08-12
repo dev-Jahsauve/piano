@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { key: 'D', note: 'MI', file: 'MI.mp3' },
             { key: 'F', note: 'FA', file: 'FA.mp3' },
             { key: 'G', note: 'SOL', file: 'SOL.mp3' },
-            { key: 'Y', note: 'RE', file: 'RE.mp3' },
+            { key: 'Y', note: 're', file: 're.mp3' },
             { key: 'H', note: 'MI', file: 'MI.mp3' },
             { key: 'J', note: 'LA', file: 'LA.mp3' },
             { key: 'K', note: 'SI', file: 'SI.mp3' },
